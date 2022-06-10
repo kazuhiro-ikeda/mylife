@@ -1,0 +1,48 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}クリエイト | It's My Life{% endblock title %}
+
+{% block content %}
+    <article id="create" class="container">
+        <form method="post" action="">
+            {% csrf_token %}
+            <table>
+                <tr>
+                    <th>カテゴリ</th>
+                    <td>{{ object.category }}</td>
+                </tr>
+                <tr>
+                    <th>タイトル</th>
+                    <td>{{ object.title }}</td>
+                </tr>
+                <tr>
+                    <th>詳細</th>
+                    <td>{{ object.desc }}</td>
+                </tr>
+                <tr>
+                    <th>ショップ</th>
+                    <td>
+                        <ul>
+                            {% for item in object.shop.all %}
+                                <li>{{ item }}</li>
+                            {% endfor %}
+                        </ul>
+                    </td>
+                </tr>
+                <tr>
+                    <th>作成日</th>
+                    <td>{{ object.created_at }}</td>
+                </tr>
+                <tr>
+                    <th>更新日</th>
+                    <td>{{ object.updated_at }}</td>
+                </tr>
+            </table>
+            <div class="box_btn">
+                <a class="button" href="javascript:history.back();">戻る</a>
+                <a class="button" href="{% url 'update' object.pk %}">編集</a>
+            </div>
+        </form>
+    </article>
+{% endblock content %}

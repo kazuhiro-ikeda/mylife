@@ -1,0 +1,663 @@
+@charset "UTF-8";
+/* 
+html5doctor.com Reset Stylesheet v1.6.1
+Last Updated: 2010-09-17
+Author: Richard Clark - http://richclarkdesign.com 
+*/
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code,
+del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var,
+b, i,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+}
+
+body {
+  line-height: 1;
+}
+
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+nav ul {
+  list-style: none;
+}
+
+ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+a {
+  margin: 0;
+  padding: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+}
+
+address {
+  font-style: normal;
+}
+
+/* change colours to suit your needs */
+ins {
+  background-color: #ff9;
+  color: #000;
+  text-decoration: none;
+}
+
+/* change colours to suit your needs */
+mark {
+  background-color: #ff9;
+  color: #000;
+  font-style: italic;
+  font-weight: bold;
+}
+
+del {
+  text-decoration: line-through;
+}
+
+abbr[title], dfn[title] {
+  border-bottom: 1px dotted;
+  cursor: help;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* change border colour to suit your needs */
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #cccccc;
+  margin: 1em 0;
+  padding: 0;
+}
+
+input, select {
+  vertical-align: middle;
+}
+
+/*body:after {
+    content: url("../images/") url("");
+    display: none;
+}*/
+body {
+  color: #333;
+  font-family: "游ゴシック", YuGothic, "Hiragino Kaku Gothic ProN", "ヒラギノ角ゴ ProN W3", Meiryo, メイリオ, sans-serif;
+  font-size: 14px;
+  word-wrap: break-word;
+  -webkit-font-smoothing: subpixel-antialiased;
+  -webkit-text-size-adjust: 100%;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+@media screen and (max-width: 750px) {
+  body {
+    width: 100%;
+    font-size: 3.4vw;
+  }
+}
+
+body::-webkit-scrollbar {
+  /* Chrome, Safari 対応 */
+  display: none;
+}
+
+a {
+  color: #333;
+  text-decoration: none;
+}
+
+a:active, a:focus {
+  outline: none;
+}
+
+@media (max-width: 750px) {
+  .image {
+    display: none;
+  }
+}
+.image.bk {
+  display: block;
+}
+@media (max-width: 750px) {
+  .image.bk {
+    display: none;
+  }
+}
+
+.image_s {
+  display: none;
+}
+@media (max-width: 750px) {
+  .image_s {
+    display: inline;
+  }
+}
+@media (max-width: 750px) {
+  .image_s.bk {
+    display: block;
+  }
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  line-height: 1;
+  font-weight: normal;
+}
+
+p {
+  text-align: justify;
+}
+
+.anc {
+  margin-top: 0px;
+  padding-top: 0px;
+}
+@media (max-width: 750px) {
+  .anc {
+    margin-top: 0vw;
+    padding-top: 0vw;
+  }
+}
+
+#main {
+  width: 100%;
+}
+
+.block_p {
+  display: block;
+}
+@media screen and (max-width: 750px) {
+  .block_p {
+    display: none;
+  }
+}
+
+.block_s {
+  display: none;
+}
+@media screen and (max-width: 750px) {
+  .block_s {
+    display: block;
+  }
+}
+
+.inline_p {
+  display: inline;
+}
+@media screen and (max-width: 750px) {
+  .inline_p {
+    display: none;
+  }
+}
+
+.inline_s {
+  display: none;
+}
+@media screen and (max-width: 750px) {
+  .inline_s {
+    display: inline;
+  }
+}
+
+.material-symbols-outlined.key {
+  font-size: 40px;
+}
+@media (max-width: 750px) {
+  .material-symbols-outlined.key {
+    font-size: 8vw;
+  }
+}
+.material-symbols-outlined.import {
+  font-size: 40px;
+}
+@media (max-width: 750px) {
+  .material-symbols-outlined.import {
+    font-size: 8vw;
+  }
+}
+.material-symbols-outlined.chevron_right {
+  font-size: 18px;
+}
+@media (max-width: 750px) {
+  .material-symbols-outlined.chevron_right {
+    font-size: 4vw;
+  }
+}
+
+.btn {
+  transition: opacity 0.25s;
+}
+.btn:hover {
+  opacity: 0.5;
+}
+@media (max-width: 750px) {
+  .btn:hover {
+    opacity: 1;
+  }
+}
+
+.header {
+  display: flex;
+  display: -ms-flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+}
+@media (max-width: 750px) {
+  .header {
+    padding: 3vw;
+  }
+}
+.header .logo a {
+  display: inline-flex;
+  align-items: center;
+}
+.header .logo .in_text {
+  font-family: "Raleway", sans-serif;
+  font-size: 30px;
+  font-weight: 700;
+}
+@media (max-width: 750px) {
+  .header .logo .in_text {
+    font-size: 6vw;
+  }
+}
+
+.container {
+  width: 94vw;
+  margin: 0 auto;
+  padding: 60px 0 60px;
+}
+@media (max-width: 750px) {
+  .container {
+    width: 88vw;
+    padding: 10vw 0 10vw;
+  }
+}
+.container.login {
+  width: 400px;
+  margin: 0 auto;
+  padding: 60px 0 60px;
+}
+@media (max-width: 750px) {
+  .container.login {
+    width: 76vw;
+    padding: 10vw 0 10vw;
+  }
+}
+.container.file_import {
+  width: 400px;
+  margin: 0 auto 120px;
+  padding: 60px 0 60px;
+}
+@media (max-width: 750px) {
+  .container.file_import {
+    width: 76vw;
+    padding: 10vw 0 25vw;
+  }
+}
+.container.list {
+  width: 1024px;
+  margin: 0 auto;
+}
+@media (max-width: 750px) {
+  .container.list {
+    width: 88vw;
+  }
+}
+.container .ttl_page {
+  padding: 0 0 5px;
+  border-bottom: 2px solid #333;
+  margin: 0 0 30px;
+}
+@media (max-width: 750px) {
+  .container .ttl_page {
+    padding: 0 0 1vw;
+    margin: 0 0 5vw;
+  }
+}
+.container .ttl_page .in_text {
+  font-size: 24px;
+  font-weight: bold;
+  line-height: 1.5;
+  letter-spacing: 2px;
+}
+@media (max-width: 750px) {
+  .container .ttl_page .in_text {
+    font-size: 4.4vw;
+  }
+}
+
+#top .global-items,
+#list .global-items {
+  display: flex;
+  display: -ms-flex;
+  flex-wrap: wrap;
+  line-height: 2;
+}
+#top .global-items li a,
+#list .global-items li a {
+  font-size: 18px;
+  font-weight: bold;
+  display: inline-flex;
+  padding: 8px 20px;
+  border: 1px solid #333;
+  margin: 0 20px 5px 0;
+}
+@media all and (-ms-high-contrast: none) {
+  #top .global-items li a,
+#list .global-items li a {
+    padding: 14px 20px 8px;
+  }
+}
+@media (max-width: 750px) {
+  #top .global-items li a,
+#list .global-items li a {
+    font-size: 4vw;
+    padding: 2vw 4vw 2vw;
+    margin: 0 4vw 3vw 0;
+  }
+}
+
+#create table {
+  width: 100%;
+  line-height: 1.5;
+  margin: 0 0 40px;
+}
+@media (max-width: 750px) {
+  #create table {
+    margin: 0 0 10vw;
+  }
+}
+#create table tr th {
+  display: block;
+  width: 100%;
+  text-align: left;
+  padding: 0 0 10px 0;
+  font-size: 18px;
+}
+@media (max-width: 750px) {
+  #create table tr th {
+    padding: 0 0 3vw 0;
+    font-size: 4vw;
+  }
+}
+#create table tr th .mini {
+  font-size: 14px;
+  line-height: 1.5;
+  font-weight: normal;
+}
+#create table tr td {
+  display: block;
+  width: 100%;
+  padding: 0 0 30px 0;
+}
+@media (max-width: 750px) {
+  #create table tr td {
+    padding: 0 0 6vw 0;
+  }
+}
+
+#list table {
+  line-height: 1.5;
+  width: 100%;
+}
+#list table tr {
+  border-bottom: 1px solid silver;
+}
+#list table tr th {
+  text-align: left;
+  vertical-align: middle;
+  padding: 20px;
+  white-space: nowrap;
+  width: 1em;
+}
+@media (max-width: 750px) {
+  #list table tr th {
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 3vw;
+  }
+}
+#list table tr td {
+  padding: 20px;
+  vertical-align: middle;
+}
+#list table tr td:first-of-type {
+  width: 1em;
+  white-space: nowrap;
+}
+@media (max-width: 750px) {
+  #list table tr td {
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 3vw;
+  }
+}
+#list table tr td .detail {
+  display: inline-block;
+  padding: 6px 20px 6px;
+  border: 1px solid #333;
+  margin: 0 0 0 5px;
+}
+@media all and (-ms-high-contrast: none) {
+  #list table tr td .detail {
+    padding: 12px 20px 6px;
+  }
+}
+@media (max-width: 750px) {
+  #list table tr td .detail {
+    padding: 2vw 4vw 2vw;
+    margin: 0 0 0 1vw;
+  }
+}
+#list table tr td .detail:first-of-type {
+  margin: 0;
+}
+@media (max-width: 750px) {
+  #list table tr td .detail:first-of-type {
+    margin: 0;
+  }
+}
+
+.free-words {
+  margin: 0 0 50px;
+}
+@media (max-width: 750px) {
+  .free-words {
+    margin: 0 0 8vw;
+  }
+}
+
+.results-message {
+  line-height: 1.8;
+  margin: 0 0 20px;
+}
+@media (max-width: 750px) {
+  .results-message {
+    margin: 0 0 3vw;
+  }
+}
+.results-message .emphasis {
+  font-weight: bold;
+}
+
+.search_back {
+  display: inline-block;
+  padding: 6px 20px 6px;
+  border: 1px solid #333;
+}
+@media all and (-ms-high-contrast: none) {
+  .search_back {
+    padding: 12px 20px 6px;
+  }
+}
+@media (max-width: 750px) {
+  .search_back {
+    padding: 2vw 4vw 2vw;
+  }
+}
+
+.footer #copyright {
+  color: white;
+  font-size: 12px;
+  text-align: center;
+  background: #333;
+  padding: 14px 0 14px;
+}
+@media (max-width: 750px) {
+  .footer #copyright {
+    font-size: 3vw;
+    padding: 3vw 0 3vw;
+  }
+}
+
+form input[type=text] {
+  border: 1px solid silver;
+  box-sizing: border-box;
+  padding: 8px;
+  width: 100%;
+  height: 42px;
+}
+form textarea {
+  font-family: "游ゴシック", YuGothic, "Hiragino Kaku Gothic ProN", "ヒラギノ角ゴ ProN W3", Meiryo, メイリオ, sans-serif;
+  border: 1px solid silver;
+  box-sizing: border-box;
+  padding: 8px;
+  width: 100%;
+  height: 200px;
+}
+form select {
+  width: 50%;
+  height: 42px;
+  border: 1px solid silver;
+}
+form select#id_shop {
+  height: 200px;
+}
+form .item_user {
+  margin: 0 0 10px;
+}
+@media (max-width: 750px) {
+  form .item_user {
+    margin: 0 0 3vw;
+  }
+}
+form .item_user input[type=text],
+form .item_user input[type=password] {
+  box-sizing: border-box;
+  padding: 0 8px;
+  width: 100%;
+  height: 40px;
+  border: 1px solid #333;
+}
+@media (max-width: 750px) {
+  form .item_user input[type=text],
+form .item_user input[type=password] {
+    padding: 0 2vw;
+    width: 100%;
+    height: 12vw;
+  }
+}
+form .box_btn {
+  display: flex;
+  display: -ms-flex;
+  justify-content: space-between;
+  margin: 30px 0 0;
+}
+@media (max-width: 750px) {
+  form .box_btn {
+    display: block;
+    justify-content: initial;
+    margin: 5vw 0 0;
+  }
+}
+form .box_btn button,
+form .box_btn .button {
+  width: 48%;
+}
+@media (max-width: 750px) {
+  form .box_btn button,
+form .box_btn .button {
+    width: 100%;
+  }
+}
+@media (max-width: 750px) {
+  form .box_btn .button {
+    margin: 0 0 3vw;
+  }
+}
+form button,
+form .button {
+  text-decoration: none;
+  color: #333;
+  display: flex;
+  display: -ms-flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 40px;
+  border: 1px solid #333;
+  font-size: 20px;
+  font-weight: normal;
+  background: none;
+  cursor: pointer;
+  transition: opacity 0.25s;
+}
+@media (max-width: 750px) {
+  form button,
+form .button {
+    height: 12vw;
+    font-size: 4.4vw;
+  }
+}
+form button:hover,
+form .button:hover {
+  opacity: 0.5;
+}
+@media (max-width: 750px) {
+  form button:hover,
+form .button:hover {
+    opacity: 1;
+  }
+}
+
+/*# sourceMappingURL=styles.css.map */

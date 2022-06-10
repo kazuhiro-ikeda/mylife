@@ -1,0 +1,29 @@
+@charset "utf-8";
+//icon
+.material-symbols-outlined {
+    //login panel
+    &.key {
+        font-size: 40px;
+
+        @media (max-width: $viewport) {
+            font-size: 8vw;
+        }
+    }
+
+    //top
+    &.import {
+        font-size: 40px;
+
+        @media (max-width: $viewport) {
+            font-size: 8vw;
+        }
+    }
+
+    &.chevron_right {
+        font-size: 18px;
+
+        @media (max-width: $viewport) {
+            font-size: 4vw;
+        }
+    }
+}

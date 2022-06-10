@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}クリエイト | It's My Life{% endblock title %}
+
+{% block content %}
+    <article id="create" class="container">
+        <form method="post" action="">
+            {% csrf_token %}
+            <table>
+                <tr>
+                    <th>ショップ</th>
+                    <td>{{ form.name }}</td>
+                </tr>
+            </table>
+            <div class="box_btn">
+                <a class="button" href="{% url 'index' %}">キャンセル</a>
+                <button type="submit" name="create">作成</button>
+            </div>
+        </form>
+    </article>
+{% endblock content %}

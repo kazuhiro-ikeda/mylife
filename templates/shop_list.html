@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}ショップリスト | It's My Life{% endblock title %}
+
+{% block content %}
+    <article id="list" class="container">
+        <ul class="global-items">
+            {% for object in object_list %}
+                <li><a href="">{{ object.name }}</a></li>
+            {% endfor %}
+        </ul>
+    </article>
+{% endblock content %}

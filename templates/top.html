@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}トップページ | It's My Life{% endblock title %}
+
+{% block content %}
+    <article id="top" class="container">
+        <div class="free-words">
+            <form method="GET" action="{% url 'freewords' %}">
+                <div class="item_user">
+                    <input type="text" name="keyword" placeholder="対象：タイトル、詳細、ショップ">
+                </div>
+                <button type="submit">検索</button>
+            </form>
+        </div>
+        <ul class="global-items">
+            <li><a href="{% url 'list' %}">フードリスト</a></li>
+            <li><a href="{% url 'shop_list' %}">ショップリスト</a></li>
+            <li><a href="{% url 'create' %}">フード登録</a></li>
+            <li><a href="{% url 'shop_create' %}">ショップ登録</a></li>
+        </ul>
+    </article>
+{% endblock content %}

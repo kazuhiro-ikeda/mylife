@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}リスト | It's My Life{% endblock title %}
+
+{% block content %}
+    <article id="list" class="container">
+        {% if messages %}
+            <div class="results-message">
+                {% for message in messages %}
+                    {{ message | safe }}
+                {% endfor %}
+            </div>
+            <a class="search_back" href="javascript:history.back();">戻る</a>
+            <hr>
+        {% endif %}
+        <table>
+            {% for object in object_list %}
+                <tr>
+                    <th>{{ object.title }}</th>
+                    <td>
+                        <ul>
+                            {% for item in object.shop.all %}
+                                <li>{{ item }}</li>
+                            {% endfor %}
+                        </ul>
+                    </td>
+                    <td>{{ object.category }}</td>
+                    <td>
+                        <a class="detail" href="{% url 'food' object.pk %}">詳細</a>
+                        <a class="detail" href="{% url 'delete' object.pk %}">削除</a>
+                    </td>
+                </tr>
+            {% endfor %}
+        </table>
+    </article>
+{% endblock content %}

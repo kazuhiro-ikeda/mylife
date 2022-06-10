@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}クリエイト | It's My Life{% endblock title %}
+
+{% block content %}
+    <article id="create" class="container">
+        <form method="post" action="">
+            {% csrf_token %}
+            <table>
+                <tr>
+                    <th>カテゴリ</th>
+                    <td>{{ object.category }}</td>
+                </tr>
+                <tr>
+                    <th>タイトル</th>
+                    <td>{{ object.title }}</td>
+                </tr>
+                <tr>
+                    <th>詳細</th>
+                    <td>{{ object.desc }}</td>
+                </tr>
+                <tr>
+                    <th>ショップ</th>
+                    <td>
+                        <ul>
+                            {% for item in object.shop.all %}
+                                <li>{{ item }}</li>
+                            {% endfor %}
+                        </ul>
+                    </td>
+                </tr>
+            </table>
+            <div class="box_btn">
+                <a class="button" href="javascript:history.back();">戻る</a>
+                <button type="submit" value="delete" onclick='return confirm("削除しますか？")'>削除</button>
+            </div>
+        </form>
+    </article>
+{% endblock content %}
