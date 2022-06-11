@@ -536,6 +536,19 @@ p {
   }
 }
 
+.paginate {
+  margin: 30px 0 0;
+}
+@media (max-width: 750px) {
+  .paginate {
+    margin: 5vw 0 0;
+  }
+}
+.paginate .list {
+  display: inline-block;
+  margin: 0 1em 0;
+}
+
 .footer #copyright {
   color: white;
   font-size: 12px;
