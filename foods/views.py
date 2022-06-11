@@ -10,6 +10,7 @@ from .models import Food, Shop, Category
 from .forms import FoodForm, ShopForm
 from django.contrib import messages
 from django.db.models import Q
+from django.core.paginator import Paginator
 
 
 # Create your views here.
@@ -18,6 +19,7 @@ from django.db.models import Q
 class List(ListView):
     template_name = 'list.html'
     model = Food
+    paginate_by = 5
 
     def get_queryset(self):
         return Food.objects.order_by('-created_at')
@@ -35,6 +37,7 @@ class Create(CreateView):
     template_name = 'create.html'
     model = Food
     form_class = FoodForm
+
     # success_url = reverse_lazy('list')
     def get_success_url(self):
         return reverse('food', kwargs={"pk": self.object.pk})
