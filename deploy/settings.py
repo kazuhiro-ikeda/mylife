@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-^-0o8%7uf-qqw+_91p^uiwqerhbt)+mek-5nb%wh#0@t!ms3w@
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['35.79.57.100']
+ALLOWED_HOSTS = ['35.79.57.100', 'localhost']
 
 
 # Application definition
@@ -75,18 +75,15 @@ WSGI_APPLICATION = 'mylife.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
-#pass : @K`J,_AeqN3uYD()
-"""DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
-    }
-}"""
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'mylife',
+        'USER': 'kazuhiro',
+        'PASSWORD': 'kazuhiromarley0326',
+        'HOST': 'localhost',
+        'PORT': '5432'
     }
 }
 
@@ -128,7 +125,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.2/howto/static-files/
 
 STATIC_URL = '/static/'
-STATIC_ROOT = '/home/ubuntu/mylife/static'
+STATIC_ROOT = BASE_DIR / 'staticfiles'
 STATICFILES_DIRS = [str(BASE_DIR / 'static')]
 
 # Default primary key field type
