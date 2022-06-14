@@ -124,9 +124,13 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.2/howto/static-files/
 
-STATIC_URL = '/static/'  # テンプレートからの読み込み
-STATIC_ROOT = BASE_DIR / 'staticfiles'  # 本番環境の静的ファイルを置くディレクトリ
-STATICFILES_DIRS = [str(BASE_DIR / 'static')]  # STATIC_ROOT内に集約したいstaticファイルを置くディレクトリを設定
+STATIC_URL = '/static/'
+<<<<<<<<< Temporary merge branch 1
+STATIC_ROOT = BASE_DIR / 'staticfiles'
+=========
+STATIC_ROOT = '/home/ubuntu/mylife/staticfiles/'
+>>>>>>>>> Temporary merge branch 2
+STATICFILES_DIRS = [str(BASE_DIR / 'static')]
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
