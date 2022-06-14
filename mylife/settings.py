@@ -12,10 +12,8 @@ https://docs.djangoproject.com/en/3.2/ref/settings/
 
 from pathlib import Path
 
-
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
-
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/3.2/howto/deployment/checklist/
@@ -27,7 +25,6 @@ SECRET_KEY = 'django-insecure-^-0o8%7uf-qqw+_91p^uiwqerhbt)+mek-5nb%wh#0@t!ms3w@
 DEBUG = True
 
 ALLOWED_HOSTS = ['*']
-
 
 # Application definition
 
@@ -72,10 +69,9 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'mylife.wsgi.application'
 
-
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
-#pass : @K`J,_AeqN3uYD()
+# pass : @K`J,_AeqN3uYD()
 """DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
@@ -89,7 +85,6 @@ DATABASES = {
         'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
-
 
 # Password validation
 # https://docs.djangoproject.com/en/3.2/ref/settings/#auth-password-validators
@@ -109,7 +104,6 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
-
 # Internationalization
 # https://docs.djangoproject.com/en/3.2/topics/i18n/
 
@@ -120,16 +114,15 @@ TIME_ZONE = 'Asia/Tokyo'
 USE_I18N = True
 
 USE_L10N = True
-
+1
 USE_TZ = True
-
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.2/howto/static-files/
 
-STATIC_URL = '/static/'
-STATIC_ROOT = BASE_DIR / 'staticfiles'
-STATICFILES_DIRS = [str(BASE_DIR / 'static')]
+STATIC_URL = '/static/'  # テンプレートからの読み込み
+STATIC_ROOT = BASE_DIR / 'staticfiles'  # 本番環境の静的ファイルを置くディレクトリ
+STATICFILES_DIRS = [str(BASE_DIR / 'static')]  # STATIC_ROOT内に集約したいstaticファイルを置くディレクトリを設定
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
