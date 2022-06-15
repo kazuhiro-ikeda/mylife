@@ -5,7 +5,7 @@ server {
 
     location = /favicon.ico { access_log off; log_not_found off; }
     location /static/ {
-        root /home/ubuntu/mylife/staticfiles;
+        root /home/ubuntu/mylife;
     }
 
     location / {

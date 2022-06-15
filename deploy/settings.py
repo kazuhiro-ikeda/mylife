@@ -12,10 +12,8 @@ https://docs.djangoproject.com/en/3.2/ref/settings/
 
 from pathlib import Path
 
-
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
-
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/3.2/howto/deployment/checklist/
@@ -27,7 +25,6 @@ SECRET_KEY = 'django-insecure-^-0o8%7uf-qqw+_91p^uiwqerhbt)+mek-5nb%wh#0@t!ms3w@
 DEBUG = False
 
 ALLOWED_HOSTS = ['35.79.57.100', 'localhost']
-
 
 # Application definition
 
@@ -43,6 +40,8 @@ INSTALLED_APPS = [
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
+    # whitenoise 場所指定
+    "whitenoise.middleware.WhiteNoiseMiddleware",
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
@@ -72,7 +71,6 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'mylife.wsgi.application'
 
-
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
@@ -86,7 +84,6 @@ DATABASES = {
         'PORT': '5432'
     }
 }
-
 
 # Password validation
 # https://docs.djangoproject.com/en/3.2/ref/settings/#auth-password-validators
@@ -106,7 +103,6 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
-
 # Internationalization
 # https://docs.djangoproject.com/en/3.2/topics/i18n/
 
@@ -120,17 +116,14 @@ USE_L10N = True
 
 USE_TZ = True
 
-
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.2/howto/static-files/
 
-STATIC_URL = '/static/'
-<<<<<<<<< Temporary merge branch 1
-STATIC_ROOT = BASE_DIR / 'staticfiles'
-=========
-STATIC_ROOT = '/home/ubuntu/mylife/staticfiles/'
->>>>>>>>> Temporary merge branch 2
-STATICFILES_DIRS = [str(BASE_DIR / 'static')]
+STATIC_URL = 'static/'  # テンプレートからの読み込み
+STATIC_ROOT = BASE_DIR / 'staticfiles'  # 本番環境の静的ファイルを置くディレクトリ
+STATICFILES_DIRS = [str(BASE_DIR / 'static')]  # STATIC_ROOT内に集約したいstaticファイルを置くディレクトリを設定
+
+STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"  # whitenoise 圧縮とキャッシュ
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
